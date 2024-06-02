@@ -1,0 +1,297 @@
+{
+    "collection": {
+        "info": {
+            "_postman_id": "e32a67cc-85f7-4ea7-8028-a6f496a1ba21",
+            "name": "Social network api",
+            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+            "updatedAt": "2024-06-02T16:05:20.000Z",
+            "uid": "35949471-e32a67cc-85f7-4ea7-8028-a6f496a1ba21",
+            "createdAt": null,
+            "lastUpdatedBy": null
+        },
+        "item": [
+            {
+                "name": "Users Listing with Search",
+                "id": "4344bf0c-4e44-46fe-9930-489a7d9fee4e",
+                "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                },
+                "request": {
+                    "method": "GET",
+                    "header": [
+                        {
+                            "key": "Authorization",
+                            "value": "Bearer <access token>",
+                            "type": "text"
+                        }
+                    ],
+                    "url": {
+                        "raw": "http://localhost:8000/api/users/?search=\"\"",
+                        "protocol": "http",
+                        "host": [
+                            "localhost"
+                        ],
+                        "port": "8000",
+                        "path": [
+                            "api",
+                            "users",
+                            ""
+                        ],
+                        "query": [
+                            {
+                                "key": "search",
+                                "value": "\"\""
+                            }
+                        ]
+                    }
+                },
+                "response": [],
+                "uid": "35949471-4344bf0c-4e44-46fe-9930-489a7d9fee4e"
+            },
+            {
+                "name": "List Pending Friend Request",
+                "id": "447984a5-e0e3-44c4-9274-babcdf06d372",
+                "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                },
+                "request": {
+                    "method": "GET",
+                    "header": [
+                        {
+                            "key": "Authorization",
+                            "value": "Bearer <access token>",
+                            "type": "text"
+                        }
+                    ],
+                    "url": {
+                        "raw": "http://localhost:8000/api/pending-requests/",
+                        "protocol": "http",
+                        "host": [
+                            "localhost"
+                        ],
+                        "port": "8000",
+                        "path": [
+                            "api",
+                            "pending-requests",
+                            ""
+                        ]
+                    }
+                },
+                "response": [],
+                "uid": "35949471-447984a5-e0e3-44c4-9274-babcdf06d372"
+            },
+            {
+                "name": "List Friends",
+                "id": "f0cc8b47-bb44-41d6-91e7-ee22376bacbc",
+                "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                },
+                "request": {
+                    "method": "GET",
+                    "header": [
+                        {
+                            "key": "Authorization",
+                            "value": "Bearer <access token>",
+                            "type": "text"
+                        }
+                    ],
+                    "url": {
+                        "raw": "http://localhost:8000/api/friends/",
+                        "protocol": "http",
+                        "host": [
+                            "localhost"
+                        ],
+                        "port": "8000",
+                        "path": [
+                            "api",
+                            "friends",
+                            ""
+                        ]
+                    }
+                },
+                "response": [],
+                "uid": "35949471-f0cc8b47-bb44-41d6-91e7-ee22376bacbc"
+            },
+            {
+                "name": "Accept Friend Request",
+                "id": "b893a8be-84df-471c-ab9b-b862dd50b526",
+                "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                },
+                "request": {
+                    "method": "PUT",
+                    "header": [
+                        {
+                            "key": "Authorization",
+                            "value": "Bearer <access token>",
+                            "type": "text"
+                        }
+                    ],
+                    "url": {
+                        "raw": "http://localhost:8000/api/friend-requests/{id}/accept/",
+                        "protocol": "http",
+                        "host": [
+                            "localhost"
+                        ],
+                        "port": "8000",
+                        "path": [
+                            "api",
+                            "friend-requests",
+                            "{id}",
+                            "accept",
+                            ""
+                        ]
+                    }
+                },
+                "response": [],
+                "uid": "35949471-b893a8be-84df-471c-ab9b-b862dd50b526"
+            },
+            {
+                "name": "Reject Friend Request",
+                "id": "f557803b-d9d5-433a-a0ed-e872b904eb8a",
+                "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                },
+                "request": {
+                    "method": "PUT",
+                    "header": [
+                        {
+                            "key": "Authorization",
+                            "value": "Bearer <access token>",
+                            "type": "text"
+                        }
+                    ],
+                    "url": {
+                        "raw": "http://localhost:8000/api/friend-requests/{id}/reject/",
+                        "protocol": "http",
+                        "host": [
+                            "localhost"
+                        ],
+                        "port": "8000",
+                        "path": [
+                            "api",
+                            "friend-requests",
+                            "{id}",
+                            "reject",
+                            ""
+                        ]
+                    }
+                },
+                "response": [],
+                "uid": "35949471-f557803b-d9d5-433a-a0ed-e872b904eb8a"
+            },
+            {
+                "name": "Sign Up",
+                "id": "ae2afa85-c0ae-450d-beb9-08d53d436fe7",
+                "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                },
+                "request": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                        "mode": "raw",
+                        "raw": "{\n    \"email\": \"enter email address\",\n    \"name\": \"enter user name\",\n    \"password\": \"enter password\"\n}",
+                        "options": {
+                            "raw": {
+                                "language": "json"
+                            }
+                        }
+                    },
+                    "url": {
+                        "raw": "http://localhost:8000/api/signup/",
+                        "protocol": "http",
+                        "host": [
+                            "localhost"
+                        ],
+                        "port": "8000",
+                        "path": [
+                            "api",
+                            "signup",
+                            ""
+                        ]
+                    }
+                },
+                "response": [],
+                "uid": "35949471-ae2afa85-c0ae-450d-beb9-08d53d436fe7"
+            },
+            {
+                "name": "Login",
+                "id": "12e1ec20-b42a-42c0-94a0-77a20397eea5",
+                "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                },
+                "request": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                        "mode": "raw",
+                        "raw": "{\n    \"email\": \"enter email address\",\n    \"password\": \"password\"\n}",
+                        "options": {
+                            "raw": {
+                                "language": "json"
+                            }
+                        }
+                    },
+                    "url": {
+                        "raw": "http://localhost:8000/api/login/",
+                        "protocol": "http",
+                        "host": [
+                            "localhost"
+                        ],
+                        "port": "8000",
+                        "path": [
+                            "api",
+                            "login",
+                            ""
+                        ]
+                    }
+                },
+                "response": [],
+                "uid": "35949471-12e1ec20-b42a-42c0-94a0-77a20397eea5"
+            },
+            {
+                "name": "Send Friend Request",
+                "id": "92eaef48-57c2-4cb0-964c-7797be88e007",
+                "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                },
+                "request": {
+                    "method": "POST",
+                    "header": [
+                        {
+                            "key": "Authorization",
+                            "value": "Bearer <access token>",
+                            "type": "text"
+                        }
+                    ],
+                    "body": {
+                        "mode": "raw",
+                        "raw": "{\n    \"to_user\": <user_id>\n}",
+                        "options": {
+                            "raw": {
+                                "language": "json"
+                            }
+                        }
+                    },
+                    "url": {
+                        "raw": "http://localhost:8000/api/friend-requests/send/",
+                        "protocol": "http",
+                        "host": [
+                            "localhost"
+                        ],
+                        "port": "8000",
+                        "path": [
+                            "api",
+                            "friend-requests",
+                            "send",
+                            ""
+                        ]
+                    }
+                },
+                "response": [],
+                "uid": "35949471-92eaef48-57c2-4cb0-964c-7797be88e007"
+            }
+        ]
+    }
+}

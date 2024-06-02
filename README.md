@@ -38,5 +38,24 @@ A social network project based on django rest framework
     ```bash
     docker compose up --build    
 
+After running the Docker command, you can access the API endpoints at:
+
+- Base URL: http://localhost:8000/
+- Endpoints:
+  - POST  api/login/  (Login) 
+  - POST  api/signup/  (Sign Up) 
+  - GET   api/users/  (User Lisiting)  
+  - POST  api/friend-requests/send/ (Send a friend request)
+  - PUT   api/friend-requests/{id}/accept/ (Accept a friend request)
+  - PUT   api/friend-requests/{id}/reject/ (Reject a friend request)
+  - GET   api/friends/ (List of friends)
+  - GET   api/pending-requests/ (List of pending friend requests)
+
+Please ensure you have the necessary authentication tokens or credentials to access authenticated endpoints.
+
+
+## Postman Collection
+You can import the Postman collection for testing the API endpoints using the `postman_collection.json` file.
+
 
 
